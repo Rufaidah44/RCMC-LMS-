@@ -1,0 +1,143 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Lbary.Master.cs" Inherits="RCMC.Master_Pages.Lbary" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <meta name="viewport" content="width=device-width , initial-scale=1.0" />
+    <style type="text/css">
+        @media screen and (max-width:959px)
+        {#container {
+             width:100%;
+         }
+         #Image1 { width:100%}
+         #td11 {width:100%}
+         #LinkButton3 {width:100%}
+        }
+
+         @media screen and (max-width:640px)
+        {#container {
+             width:100%;
+         }
+         #Image1 { width:100%}
+         #td11 {width:100%}
+         #LinkButton3 {width:100%}
+        }
+        
+         
+        .auto-style1 {
+            text-align: center;
+            
+        }
+        .auto-style2 {
+            width: 100%;
+            height: 78px;
+        }
+        .auto-style4 {
+            text-align: center;
+            width: 23%;
+        }
+        .auto-style9 {
+            width: 54%;
+            height: 39px;
+        }
+        .auto-style11 {
+            width: 54%;
+            text-align: center;
+            height: 27px;
+        }
+        .auto-style12 {
+            text-align: center;
+            width: 23%;
+            height: 27px;
+        }
+        .auto-style14 {
+            width: 54%;
+            text-align: center;
+            height: 3px;
+        }
+        .auto-style18 {
+            text-align: center;
+            width: 23%;
+            height: 39px;
+        }
+        .auto-style20 {
+            text-align: center;
+            width: 23%;
+            height: 3px;
+        }
+    </style>
+</head>
+<body background="/images/LibBG00.png" style=" background-attachment: unset ; background-position: center;">
+    <form id="form1" runat="server">
+       <div id="container"> <table class="auto-style2" align="center">
+            <tr>
+                <td class="auto-style4" rowspan="3">
+                     <asp:Image ID="Image1" runat="server" Height="128px" ImageUrl="~/images/Liblogoo.png" Width="232px" ImageAlign="Bottom" />
+                     <br />
+&nbsp;<br />
+                     </td>
+                <td class="auto-style9">
+                    </td>
+                <td class="auto-style18" style="font-family: 'Gill Sans Ultra Bold Condensed'; color: #FFCC99; font-weight: normal; ">
+                    <asp:LinkButton ID="loginLinkButton" runat="server" style="color: #993300;" OnClick="logonLinkButton_Click">Login </asp:LinkButton> | <asp:LinkButton ID="signupLinkButton" runat="server" style="color: #993300; a:hover{font-size:30px;}" OnClick="signupLinkButton_Click">Sign Up</asp:LinkButton>
+              </td>
+
+            </tr> 
+            <tr>
+                <td ID="td11" class="auto-style11" style="font-family: 'Bauhaus 93'; font-size: x-large; color: #990000;">
+                    <asp:LinkButton ID="LinkButton3" runat="server" style="color: #993300; border: thin dotted #FF9966;" OnClick="LinkButton3_Click">Home</asp:LinkButton>
+                    &nbsp;&nbsp;&nbsp;&nbsp; <a href="About.aspx" style="color: #993300; border: thin dotted #FF9966; a.hover:font-size:25px;"> About</a> &nbsp;&nbsp; &nbsp; <a href="SearchBooks.aspx" style="color: #993300; border: thin dotted #FF9966;"> Search </a> &nbsp;&nbsp;&nbsp;&nbsp; <a href="EventsNews.aspx" style="color: #993300; border: thin dotted #FF9966;"> &nbsp;News </a> &nbsp;&nbsp; 
+                    </td>
+
+                <td class="auto-style12" style="font-family: 'Gill Sans Ultra Bold Condensed'; color: #993300; font-weight: normal; ">
+                    <asp:Label ID="welcomeLabel" runat="server" Text="Welcome"></asp:Label>
+                    <asp:LinkButton ID="memIdLinkButton" runat="server" style="color: #993300; a:hover{font-size:30px;}" OnClick="memIdLinkButton_Click"> . </asp:LinkButton>
+                    
+                    <asp:Label ID="Label1" runat="server" Text="Guest" Visible="False"></asp:Label>
+                    
+                </td>
+
+            </tr> 
+            <tr>
+
+                <td class="auto-style14" style="border-style: none; font-family: 'Bauhaus 93'; font-size: 20px; color: #FFCC99; ">
+                    &nbsp;</td>
+
+                <td class="auto-style20" style="font-family: 'Gill Sans Ultra Bold Condensed'; color: #FFCC99; font-weight: normal; ">
+                    <asp:LinkButton ID="LinkButton2" runat="server" style="color: #993300; a:hover{font-size:30px;}" OnClick="LinkButton2_Click" Visible="False">Log Out</asp:LinkButton>
+                    
+                </td>
+
+            </tr> 
+        </table>
+       </div>
+        
+
+    <div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+
+
+
+
+        </asp:ContentPlaceHolder>
+    </div>
+        <footer >
+            <table style="width: 100%;">
+                <tr>
+                    <td><h5 id="demo"  class="auto-style1" style=" color: #993300; font-family: 'Century Gothic'"></h5><script> document.getElementById("demo").innerHTML = Date();</script> </td>
+                </tr>
+                <tr>
+                    <td><h5 class="auto-style1" style=" color: #993300; font-family: 'Century Gothic'; font-size: medium;"> &copy; 2016 Royal Commission Medical Center. All rights reserved</h5></td>
+                </tr>
+                
+            </table>
+            
+        </footer>
+    </form>
+</body>
+</html>
